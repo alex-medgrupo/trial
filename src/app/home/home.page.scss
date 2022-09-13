@@ -1,0 +1,14 @@
+.extensivo-col {
+  &--text-container-inicio {
+    align-self: center;
+
+    @media only screen and (max-width: 768px) {
+    }
+  }
+
+  &--imagem-container {
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
