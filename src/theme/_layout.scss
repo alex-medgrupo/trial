@@ -1,6 +1,13 @@
 body {
   min-height: 100vh;
   overflow: hidden;
+  background: hsl(var(--med-color-neutral-2));
+}
+
+ion-content,
+ion-header {
+  --background: transparent;
+  background: transparent;
 }
 
 [tp-container-input],
