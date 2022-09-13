@@ -4,10 +4,9 @@ body {
   background: hsl(var(--med-color-neutral-2));
 }
 
-ion-content,
-ion-header {
+ion-content {
   --background: transparent;
-  background: transparent;
+  height: 100vh;
 }
 
 [tp-container-input],
@@ -149,11 +148,15 @@ ion-header {
 
   @media only screen and (max-width: 768px) {
     padding-top: 48px;
+
+    &--none {
+      display: none;
+    }
   }
 }
 
 [tp-container-input] {
-  [tp-button] {
+  ion-button {
     &:hover {
       background-color: transparent;
     }
@@ -184,20 +187,15 @@ ion-header {
   display: flex;
   align-items: center;
 
-  [tp-button] {
-    @media only screen and (max-width: 768px) {
-      flex: 1;
-    }
-
-    &:not(:last-child) {
-      margin-right: 16px;
-    }
+  ion-button {
+    flex: 0 0 50%;
   }
 }
 
-.extensivo-button-color {
-  color: hsl(var(--med-color-neutral-2));
-}
+// Usar disable do ion-button 
+// .extensivo-button-color {
+//   color: hsl(var(--med-color-neutral-2));
+// }
 
 .extensivo-telefone {
   display: flex;
@@ -222,8 +220,17 @@ ion-header {
 .extensivo-concordo {
   padding: 40px 24px 24px 24px;
 
-  [tp-container-checkbox] {
-    margin-bottom: 24px;
+  ion-item {
+    --padding-start: 0;
+    --padding-end: 0;
+  }
+
+  &__checkbox {
+    margin: 0 18px 0 0 !important;
+  }
+
+  &__text {
+    color: hsl(var(--med-color-brand-3));
   }
 }
 
@@ -236,7 +243,7 @@ ion-header {
   flex: 1;
 }
 
-.checkbox-estilizado-container + .checkbox-estilizado-container {
+.checkbox-estilizado-container+.checkbox-estilizado-container {
   margin-left: 16px;
 }
 

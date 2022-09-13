@@ -1,0 +1,45 @@
+.extensivo-contato {
+  &__link {
+
+    &:link,
+    &:visited {
+      color: hsl(var(--med-color-brand-3));
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+//
+// select
+//
+[tp-container-select] {
+  [tp-select-header] {
+    height: 48px;
+  }
+
+  [tp-select-content] {
+    top: 48px;
+  }
+}
+
+//
+// checkbox
+//
+[tp-container-checkbox] {
+  min-height: 40px;
+
+  [tp-checkbox-frame] {
+    margin-right: 16px;
+
+    .med-icon {
+      color: hsl(var(--med-color-neutral-2));
+    }
+  }
+
+  [tp-label].d-inline-block {
+    display: inline-block;
+  }
+}

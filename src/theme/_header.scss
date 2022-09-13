@@ -73,6 +73,10 @@
   &__stepper {
     display: flex;
     align-items: center;
+
+    &--none {
+      display: none;
+    }
   }
 
   &__steps {
@@ -89,7 +93,7 @@
       background-color: transparent;
       border: 1px solid hsl(var(--med-color-neutral-4));
 
-      [tp-label] {
+      ion-label {
         color: hsl(var(--med-color-neutral-10));
       }
     }
@@ -103,7 +107,8 @@
 
     &--checked {
       color: hsl(var(--med-color-brand-3));
-      [tp-label] {
+
+      ion-label {
         display: none;
       }
 
