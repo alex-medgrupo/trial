@@ -1,11 +1,10 @@
-.extensivo-col {
+.extensivo-row {
   &--text-container-inicio {
-    align-self: center;
-
-    @media only screen and (max-width: 768px) {
-    }
+    align-items: center;
   }
+}
 
+.extensivo-col {
   &--imagem-container {
     @media only screen and (max-width: 768px) {
       display: none;

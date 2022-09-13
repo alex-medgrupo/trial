@@ -205,6 +205,14 @@ ion-content {
       flex: 1;
     }
   }
+
+  &--tela-inicio {
+    @media only screen and (max-width: 768px) {
+      ion-button {
+        flex: 0;
+      }
+    }
+  }
 }
 
 // Usar disable do ion-button
