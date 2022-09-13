@@ -4,16 +4,27 @@
       <div class="extensivo-header__logo-container">
         <div class="extensivo-header__logo-circle">
           <svg class="extensivo-header__logo">
-            <use xlink:href="../../assets/icon/symbol-defs.svg#icon-medgrupo"></use>
+            <use
+              xlink:href="../../assets/icon/symbol-defs.svg#icon-medgrupo"
+            ></use>
           </svg>
         </div>
-        <ion-label class="extensivo-header__title-logo" token="h20">MEDGRUPO</ion-label>
+        <ion-label class="extensivo-header__title-logo" token="h20"
+          >MEDGRUPO</ion-label
+        >
       </div>
-      <ion-label class="extensivo-header__title" token="h20">MEDSoft Trial</ion-label>
+      <ion-label class="extensivo-header__title" token="h20"
+        >MEDSoft Trial</ion-label
+      >
     </div>
 
     <div class="extensivo-header__stepper">
-      <ion-label class="extensivo-header__dados" token="p14x" ds-color="neutral-8">Dados pessoais</ion-label>
+      <ion-label
+        class="extensivo-header__dados"
+        token="p14x"
+        ds-color="neutral-8"
+        >Dados pessoais</ion-label
+      >
 
       <div class="extensivo-header__steps extensivo-header__steps--active">
         <ion-label token="p10b" ds-color="neutral-6">1</ion-label>
@@ -39,11 +50,13 @@
   <ion-content>
     <main class="extensivo-container extensivo-container--main">
       <div class="extensivo-row">
-        <div class="extensivo-col extensivo-text-container extensivo-text-container--none">
-          <ion-label class="extensivo-title" token="h32x">
+        <div
+          class="extensivo-col extensivo-text-container extensivo-text-container--none"
+        >
+          <ion-label class="extensivo-title" token="h48x">
             Bora começar!
           </ion-label>
-          <ion-label class="extensivo-title" token="h32x" ds-color="brand">
+          <ion-label class="extensivo-title" token="h48x" ds-color="brand">
             Quem é você?
           </ion-label>
         </div>
@@ -51,45 +64,85 @@
         <div class="extensivo-col extensivo-col--form">
           <form class="extensivo-form">
             <div class="extensivo-input">
-              <ion-label token="p14" ds-color="neutral-8">Nome completo</ion-label>
-              <ion-input mode="md" ds-name="secondary" placeholder="Digite seu nome completo"></ion-input>
+              <ion-label token="p14" ds-color="neutral-8"
+                >Nome completo</ion-label
+              >
+              <ion-input
+                mode="md"
+                ds-name="secondary"
+                placeholder="Digite seu nome completo"
+              ></ion-input>
 
-              <div class="extensivo-telefone margin-top-24 margin-bottom-24">
+              <div class="extensivo-telefone margin-top-24">
                 <div class="extensivo-telefone__ddi">
                   <ion-label token="p14" ds-color="neutral-8">Pais</ion-label>
                   <tp-input-container ds-color="neutral-3" has-icon="end">
-                    <ion-select class="margin-top-8" mode="md" ds-color="neutral-3" placeholder="+55"></ion-select>
+                    <ion-select
+                      class="margin-top-8"
+                      mode="md"
+                      ds-color="neutral-3"
+                      placeholder="+55"
+                    ></ion-select>
                     <!-- <ion-icon class="med-icon" slot="end" name="med-baixo"></ion-icon> VER COM BLEGGI-->
                   </tp-input-container>
                 </div>
                 <div class="extensivo-telefone__numero">
-                  <ion-label token="p14" ds-color="neutral-8">Telefone</ion-label>
-                  <ion-input mode="md" ds-name="secondary" placeholder="00 0000000"></ion-input>
+                  <ion-label token="p14" ds-color="neutral-8"
+                    >Telefone</ion-label
+                  >
+                  <ion-input
+                    mode="md"
+                    ds-name="secondary"
+                    placeholder="00 0000000"
+                  ></ion-input>
                 </div>
               </div>
 
               <ion-label token="p14" ds-color="neutral-8">E-mail</ion-label>
-              <ion-input mode="md" ds-name="secondary" placeholder="seuemail@gmail.com"></ion-input>
+              <ion-input
+                mode="md"
+                ds-name="secondary"
+                placeholder="seuemail@gmail.com"
+              ></ion-input>
 
               <div class="margin-top-24">
-                <ion-label token="p14" ds-color="neutral-8">Digite seu CPF</ion-label>
-                <ion-input mode="md" ds-name="secondary" placeholder="000.000.000-00"></ion-input>
+                <ion-label token="p14" ds-color="neutral-8"
+                  >Digite seu CPF</ion-label
+                >
+                <ion-input
+                  mode="md"
+                  ds-name="secondary"
+                  placeholder="000.000.000-00"
+                ></ion-input>
               </div>
             </div>
 
             <div class="extensivo-concordo">
               <ion-item mode="ios" lines="none">
-                <ion-label token="p14b" ds-color="neutral-10">Li e concordo com o aviso de <span
-                    class="extensivo-concordo__text">privacidade</span> e os
+                <ion-label token="p14b" ds-color="neutral-10"
+                  >Li e concordo com o aviso de
+                  <span class="extensivo-concordo__text">privacidade</span> e os
                   <span class="extensivo-concordo__text">termos de uso</span>
                 </ion-label>
-                <ion-checkbox class="extensivo-concordo__checkbox" slot="start" value="value-1" mode="md">
+                <ion-checkbox
+                  class="extensivo-concordo__checkbox"
+                  slot="start"
+                  value="value-1"
+                  mode="md"
+                >
                 </ion-checkbox>
               </ion-item>
 
               <div class="extensivo-button padding-0 margin-top-24">
-                <ion-button mode="ios" expand="block" fill="clear">Voltar</ion-button>
-                <ion-button mode="ios" expand="block" class="extensivo-button-color">Continuar</ion-button>
+                <ion-button mode="ios" expand="block" fill="clear"
+                  >Voltar</ion-button
+                >
+                <ion-button
+                  mode="ios"
+                  expand="block"
+                  class="extensivo-button-color"
+                  >Continuar</ion-button
+                >
               </div>
             </div>
           </form>
