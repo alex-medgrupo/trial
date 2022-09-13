@@ -188,7 +188,15 @@ ion-content {
   align-items: center;
 
   ion-button {
-    flex: 0 0 50%;
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    ion-button {
+      flex: 0 0 50%;
+    }
   }
 }
 
