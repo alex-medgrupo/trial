@@ -91,6 +91,7 @@ ion-content {
 
     ion-label:not(:first-child) {
       margin-top: 24px;
+      display: inline-block;
     }
   }
 
@@ -191,16 +192,22 @@ ion-content {
     &:not(:last-child) {
       margin-right: 24px;
     }
+
+    .med-icon {
+      height: 24px;
+      width: 24px;
+      margin-right: 8px;
+    }
   }
 
   @media only screen and (max-width: 768px) {
     ion-button {
-      flex: 0 0 50%;
+      flex: 1;
     }
   }
 }
 
-// Usar disable do ion-button 
+// Usar disable do ion-button
 // .extensivo-button-color {
 //   color: hsl(var(--med-color-neutral-2));
 // }
@@ -251,7 +258,7 @@ ion-content {
   flex: 1;
 }
 
-.checkbox-estilizado-container+.checkbox-estilizado-container {
+.checkbox-estilizado-container + .checkbox-estilizado-container {
   margin-left: 16px;
 }
 

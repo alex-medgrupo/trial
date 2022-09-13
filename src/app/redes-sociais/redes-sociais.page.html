@@ -1,9 +1,110 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>redes-sociais</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div>
+  <header class="extensivo-header">
+    <div class="extensivo-header__container">
+      <div class="extensivo-header__logo-container">
+        <div class="extensivo-header__logo-circle">
+          <svg class="extensivo-header__logo">
+            <use
+              xlink:href="../../assets/icon/symbol-defs.svg#icon-medgrupo"
+            ></use>
+          </svg>
+        </div>
+        <ion-label class="extensivo-header__title-logo" token="h20"
+          >MEDGRUPO</ion-label
+        >
+      </div>
+      <ion-label class="extensivo-header__title" token="h20"
+        >MEDSoft Trial</ion-label
+      >
+    </div>
 
-<ion-content>
+    <div class="extensivo-header__stepper">
+      <ion-label
+        class="extensivo-header__dados"
+        token="p14x"
+        ds-color="neutral-8"
+        >Dados pessoais</ion-label
+      >
 
-</ion-content>
+      <div class="extensivo-header__steps extensivo-header__steps--active">
+        <ion-label token="p10b" ds-color="neutral-6">1</ion-label>
+        <ion-icon class="med-icon" name="checkmark-outline"></ion-icon>
+      </div>
+
+      <div class="extensivo-header__line">&nbsp;</div>
+
+      <div class="extensivo-header__steps">
+        <ion-label token="p10b" ds-color="neutral-6">2</ion-label>
+        <ion-icon class="med-icon" name="checkmark-outline"></ion-icon>
+      </div>
+
+      <div class="extensivo-header__line">&nbsp;</div>
+
+      <div class="extensivo-header__steps">
+        <ion-label token="p10b" ds-color="neutral-6">3</ion-label>
+        <ion-icon class="med-icon" name="checkmark-outline"></ion-icon>
+      </div>
+    </div>
+  </header>
+
+  <ion-content>
+    <main class="extensivo-container extensivo-container--main">
+      <div class="extensivo-row">
+        <div
+          class="extensivo-col extensivo-text-container extensivo-text-container--none"
+        >
+          <ion-label class="extensivo-title" token="h48x">
+            Podemos te seguir nas suas
+            <ion-label
+              class="extensivo-title extensivo-title--brand-4"
+              token="h48x"
+              >redes sociais?</ion-label
+            >
+          </ion-label>
+          <ion-label class="margin-top-24" token="p16x" ds-color="neutral-8">
+            *Escolha pelos menos uma rede social para seguir em frente! :)
+          </ion-label>
+        </div>
+
+        <div class="extensivo-col extensivo-col--form">
+          <form class="extensivo-form">
+            <div class="extensivo-input">
+              <ion-label token="p14" ds-color="neutral-8"
+                >Qual é a rede social que mais utiliza?</ion-label
+              >
+              <ion-select
+                class="margin-top-8"
+                mode="md"
+                ds-color="neutral-3"
+                placeholder="Selecionar"
+              ></ion-select>
+              <!-- ds-name="secondary" -->
+
+              <ion-label token="p14" ds-color="neutral-8"
+                >Digite o endereço dela</ion-label
+              >
+              <ion-input
+                mode="md"
+                ds-name="secondary"
+                placeholder="@usename"
+              ></ion-input>
+              <!-- ds-name="secondary" -->
+            </div>
+
+            <div class="extensivo-button">
+              <ion-button mode="ios" expand="block" fill="clear"
+                >Voltar</ion-button
+              >
+              <ion-button
+                mode="ios"
+                expand="block"
+                class="extensivo-button-color"
+                >Continuar</ion-button
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </ion-content>
+</div>

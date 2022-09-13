@@ -1,9 +1,93 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>conclusao</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div>
+  <header class="extensivo-header">
+    <div class="extensivo-header__container">
+      <div class="extensivo-header__logo-container">
+        <div class="extensivo-header__logo-circle">
+          <svg class="extensivo-header__logo">
+            <use
+              xlink:href="../../assets/icon/symbol-defs.svg#icon-medgrupo"
+            ></use>
+          </svg>
+        </div>
+        <ion-label class="extensivo-header__title-logo" token="h20"
+          >MEDGRUPO</ion-label
+        >
+      </div>
+      <ion-label class="extensivo-header__title" token="h20"
+        >MEDSoft Trial</ion-label
+      >
+    </div>
 
-<ion-content>
+    <div class="extensivo-header__stepper extensivo-header__stepper--none">
+      <ion-label
+        class="extensivo-header__dados"
+        token="p14x"
+        ds-color="neutral-8"
+        >Dados pessoais</ion-label
+      >
 
-</ion-content>
+      <div class="extensivo-header__steps extensivo-header__steps--checked">
+        <ion-label token="p10b" ds-color="neutral-6">1</ion-label>
+        <ion-icon class="med-icon" name="checkmark-outline"></ion-icon>
+      </div>
+
+      <div class="extensivo-header__line">&nbsp;</div>
+
+      <div class="extensivo-header__steps extensivo-header__steps--active">
+        <ion-label token="p10b" ds-color="neutral-6">2</ion-label>
+        <ion-icon class="med-icon" name="checkmark-outline"></ion-icon>
+      </div>
+
+      <div class="extensivo-header__line">&nbsp;</div>
+
+      <div class="extensivo-header__steps">
+        <ion-label token="p10b" ds-color="neutral-6">3</ion-label>
+        <ion-icon class="med-icon" name="checkmark-outline"></ion-icon>
+      </div>
+    </div>
+  </header>
+
+  <ion-content>
+    <main class="extensivo-container extensivo-container--main">
+      <div class="extensivo-row extensivo-row--center-left">
+        <div class="extensivo-col extensivo-col--center-left">
+          <div class="extensivo-text-container">
+            <ion-label class="extensivo-title" token="h48x">
+              Cadastro realizado
+              <ion-label
+                class="extensivo-title extensivo-title--brand-4"
+                token="h48x"
+                ds-color="brand"
+                >com sucesso!
+              </ion-label>
+            </ion-label>
+            <ion-label class="margin-top-24" token="p16x" ds-color="neutral-8"
+              >Você receberá um e-mail com todas as instruções para baixar o
+              aplicativo MEDSoft.
+            </ion-label>
+          </div>
+          <div class="extensivo-button">
+            <ion-button mode="ios" fill="clear">
+              <svg slot="start" class="med-icon">
+                <use
+                  xlink:href="../../assets/icon/symbol-defs.svg#icon-email"
+                ></use>
+              </svg>
+              <!-- <ion-icon
+                slot="start"
+                class="med-icon"
+                name="med-email"
+              ></ion-icon> -->
+              <ion-label token="p16b">
+                Não recebi o e-mail.
+                <ion-label token="p16b" ds-color="brand">
+                  Enviar novamente
+                </ion-label>
+              </ion-label>
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </ion-content>
+</div>
