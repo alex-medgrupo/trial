@@ -1,10 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-function* stepGenerator(stepQuantity: number) {
-  for (let index = 1; index <= stepQuantity; index++) {
-    yield index;
-  }
-}
+import { stepGenerator } from '@shared/utils';
 
 @Component({
   selector: 'app-stepper',
@@ -15,19 +10,19 @@ export class StepperComponent implements OnInit {
   /**
    * Define o titulo da página.
    */
-  @Input() pageTitle: string;
+  @Input() pageTitle!: string;
 
   /**
    * Define o step ativo.
    */
-  @Input() activeStep: number;
+  @Input() activeStep!: number;
 
   /**
    * Define a quantidades de steps a serem renderizados.
    */
   @Input() stepQuantity = 3;
 
-  iterator: number[];
+  iterator!: number[];
 
   constructor() {}
 
