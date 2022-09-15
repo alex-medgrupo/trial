@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpProvider } from '@shared/http.provider';
 import { API_TRIAL } from 'src/environments/environment';
-import { Concurso, ConcursoDto } from './concursos.interface';
-import { ConcursoMapper } from './concursos.mapper';
+import { Concurso, ConcursoDto } from './concurso.interface';
+import { ConcursoMapper } from './concurso.mapper';
 
 @Injectable()
 export class ConcursoRepository {
@@ -11,7 +11,7 @@ export class ConcursoRepository {
   constructor(private http: HttpProvider) {}
 
   private static get baseUrl(): string {
-    return `${API_TRIAL}/Graduacao`;
+    return `${API_TRIAL}/Concursos`;
   }
 
   async getAll(): Promise<Concurso[]> {

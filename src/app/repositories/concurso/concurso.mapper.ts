@@ -1,5 +1,5 @@
 import Mapper from 'src/app/shared/mapper.abstract';
-import { Concurso, ConcursoDto } from './concursos.interface';
+import { Concurso, ConcursoDto } from './concurso.interface';
 
 export class ConcursoMapper extends Mapper<Concurso, ConcursoDto> {
   toDto({ id, description }: Concurso): ConcursoDto {
