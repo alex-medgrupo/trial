@@ -16,7 +16,7 @@ export class HttpProvider {
   async post<T>(url: string, body?: any, customHeaders: any = {}): Promise<T> {
     const headers = await this.generateHeaders(customHeaders);
 
-    return await this.http.post<T>(url, body, { headers }).toPromise();
+    return this.http.post<T>(url, body, { headers }).toPromise();
   }
 
   async put<T>(url: string, body?: any, customHeaders: any = {}): Promise<T> {

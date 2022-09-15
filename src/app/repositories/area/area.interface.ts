@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-
 export interface AreaDto {
   Id: number;
   Descricao: string;

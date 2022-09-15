@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-
 export interface ConcursoDto {
   Id: string;
   Descricao: string;
