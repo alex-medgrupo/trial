@@ -1,11 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
+import { HeaderModule } from '../components/header/header.module';
+import { StepperModule } from '../components/stepper/stepper.module';
 import { SeusEstudosPageRoutingModule } from './seus-estudos-routing.module';
-
 import { SeusEstudosPage } from './seus-estudos.page';
 
 @NgModule({
@@ -13,8 +12,10 @@ import { SeusEstudosPage } from './seus-estudos.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    SeusEstudosPageRoutingModule
+    SeusEstudosPageRoutingModule,
+    HeaderModule,
+    StepperModule,
   ],
-  declarations: [SeusEstudosPage]
+  declarations: [SeusEstudosPage],
 })
 export class SeusEstudosPageModule {}

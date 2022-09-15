@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { DadosPessoaisSecondPage } from './dados-pessoais-second.page';
+import { StepperComponent } from './stepper.component';
 
-describe('DadosPessoaisSecondPage', () => {
-  let component: DadosPessoaisSecondPage;
-  let fixture: ComponentFixture<DadosPessoaisSecondPage>;
+describe('StepperComponent', () => {
+  let component: StepperComponent;
+  let fixture: ComponentFixture<StepperComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ DadosPessoaisSecondPage ],
+      declarations: [ StepperComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(DadosPessoaisSecondPage);
+    fixture = TestBed.createComponent(StepperComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

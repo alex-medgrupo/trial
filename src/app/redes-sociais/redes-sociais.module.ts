@@ -1,11 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
+import { HeaderModule } from '../components/header/header.module';
+import { StepperModule } from '../components/stepper/stepper.module';
 import { RedesSociaisPageRoutingModule } from './redes-sociais-routing.module';
-
 import { RedesSociaisPage } from './redes-sociais.page';
 
 @NgModule({
@@ -13,8 +12,10 @@ import { RedesSociaisPage } from './redes-sociais.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    RedesSociaisPageRoutingModule
+    RedesSociaisPageRoutingModule,
+    HeaderModule,
+    StepperModule,
   ],
-  declarations: [RedesSociaisPage]
+  declarations: [RedesSociaisPage],
 })
 export class RedesSociaisPageModule {}

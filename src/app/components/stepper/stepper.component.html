@@ -1,0 +1,17 @@
+<div class="stepper">
+  <ion-label class="stepper__dados" token="p14x" ds-color="neutral-8">
+    {{ pageTitle }}
+  </ion-label>
+
+  <div *ngFor="let step of iterator">
+    <div
+      [ngClass]="{ 'stepper__steps--active': step === activeStep }"
+      class="stepper__steps"
+    >
+      <ion-label token="p10b" ds-color="neutral-6">{{ step }}</ion-label>
+      <ion-icon class="med-icon" name="checkmark-outline"></ion-icon>
+    </div>
+
+    <div class="stepper__line">&nbsp;</div>
+  </div>
+</div>
