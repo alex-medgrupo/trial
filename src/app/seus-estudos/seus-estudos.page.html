@@ -4,17 +4,9 @@
   </app-header>
 
   <ion-content>
-    <main class="trial-container trial-container--main">
-      <div class="trial-row">
-        <div class="trial-col trial-text-container trial-text-container--none">
-          <ion-label class="trial-title" token="h48x">
-            Onde você
-            <ion-label class="trial-title trial-title--brand-4" token="h48x"
-              >estuda?</ion-label
-            >
-          </ion-label>
-        </div>
-
+    <main class="trial-scroll">
+    <div class="trial-container">
+      <div class="trial-row">     
         <div class="trial-col trial-col--form">
           <form class="trial-form">
             <div class="trial-input">
@@ -32,7 +24,7 @@
               </tp-input-container>
 
               <ion-label token="p14" ds-color="neutral-8"
-                >Ano de formação?</ion-label
+                >Ano de formação</ion-label
               >
               <tp-input-container ds-name="secondary" has-icon="end">
                 <ion-select
@@ -83,7 +75,7 @@
             </div>
 
             <div class="trial-button">
-              <ion-button mode="ios" expand="block" fill="clear"
+              <ion-button mode="ios" expand="block" fill="clear" no-padding="true"
                 >Voltar</ion-button
               >
               <ion-button mode="ios" expand="block" class="trial-button-color"
@@ -93,6 +85,7 @@
           </form>
         </div>
       </div>
+    </div>
     </main>
   </ion-content>
 </div>
