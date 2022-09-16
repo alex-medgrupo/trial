@@ -4,20 +4,9 @@
   </app-header>
 
   <ion-content>
-    <main class="trial-container trial-container--main">
-      <div class="trial-row">
-        <div class="trial-col trial-text-container trial-text-container--none">
-          <ion-label class="trial-title" token="h48x">
-            Podemos te seguir nas suas
-            <ion-label class="trial-title trial-title--brand-4" token="h48x"
-              >redes sociais?</ion-label
-            >
-          </ion-label>
-          <ion-label class="margin-top-24" token="p16x" ds-color="neutral-8">
-            *Escolha pelos menos uma rede social para seguir em frente! :)
-          </ion-label>
-        </div>
-
+    <main class="trial-scroll">
+    <div class="trial-container">
+      <div class="trial-row">  
         <div class="trial-col trial-col--form">
           <form class="trial-form">
             <div class="trial-input">
@@ -45,16 +34,17 @@
             </div>
 
             <div class="trial-button">
-              <ion-button mode="ios" expand="block" fill="clear"
+              <ion-button mode="ios" expand="block" fill="clear" no-padding="true"
                 >Voltar</ion-button
               >
               <ion-button mode="ios" expand="block" class="trial-button-color"
-                >Continuar</ion-button
+                >Finalizar</ion-button
               >
             </div>
           </form>
         </div>
       </div>
+    </div>
     </main>
   </ion-content>
 </div>
