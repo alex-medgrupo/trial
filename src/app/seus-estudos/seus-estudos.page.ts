@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-seus-estudos',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./seus-estudos.page.scss'],
 })
 export class SeusEstudosPage implements OnInit {
+  constructor(private navController: NavController) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  goBack() {
+    this.navController.navigateBack(['dados-pessoais']);
   }
 
+  continue() {
+    this.navController.navigateForward(['conclusao']);
+  }
 }
