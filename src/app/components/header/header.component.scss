@@ -13,21 +13,11 @@
   &__container {
     display: flex;
     align-items: center;
-
-    @media only screen and (max-width: 768px) {
-      height: initial;
-    }
   }
 
   &__logo-container {
     display: flex;
     align-items: center;
-    padding-right: 24px;
-    border-right: 1px solid hsl(var(--med-color-neutral-3));
-
-    @media only screen and (max-width: 768px) {
-      border: none;
-    }
   }
 
   &__logo-circle {
@@ -47,15 +37,10 @@
   }
 
   &__title-logo {
+    height: 15px;
+    width: 123px;
+    fill: hsl(var(--med-color-neutral-10));
     margin-left: 9px;
-
-    @media only screen and (max-width: 768px) {
-      display: none;
-    }
-  }
-
-  &__title {
-    padding-left: 24px;
 
     @media only screen and (max-width: 768px) {
       display: none;

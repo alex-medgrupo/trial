@@ -25,7 +25,7 @@
     "@capacitor/keyboard": "4.0.1",
     "@capacitor/status-bar": "4.0.1",
     "@ionic/angular": "^6.2.2",
-    "@ionic/core": "git+https://github.com/MEDGRUPOGIT/med-components.git#1.6.5",
+    "@ionic/core": "git+https://github.com/MEDGRUPOGIT/med-components.git#ffd7b96e07310a2b3f638100d423177aa36a6cc3",
     "ionicons": "^6.0.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
