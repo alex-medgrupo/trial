@@ -36,9 +36,9 @@ ion-content {
   overflow: auto;
   height: calc(100vh - 96px);
 
-  // @media only screen and (max-width: 768px) {
-  //   height: auto;
-  // }
+  @media only screen and (max-width: 768px) {
+    height: calc(100vh - 80px);
+  }
 }
 
 .trial-container {
@@ -163,4 +163,16 @@ ion-content {
   .trial-button {
     padding: 0;
   }
+}
+
+.trial-telefone {
+  display: flex;
+
+  &__ddi {
+    margin-right: 16px;
+  }
+
+  &__numero {
+    flex: 1;
+  } 
 }
