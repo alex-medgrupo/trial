@@ -23,17 +23,45 @@
                 <div class="trial-telefone margin-top-24">
                   <div class="trial-telefone__ddi">
                     <ion-label token="p14" ds-color="neutral-8">País</ion-label>
-                    <tp-input-container ds-name="secondary" has-icon="end">
-                      <ion-input
-                        formControlName="country"
-                        class="margin-top-8"
-                        mode="md"
-                        ds-name="secondary"
-                        placeholder="+55"
-                        readonly
-                      ></ion-input>
-                      <!-- <ion-icon class="med-icon" slot="end" name="med-baixo"></ion-icon> VER COM BLEGGI-->
-                    </tp-input-container>
+                    <div
+                      class="margin-top-8"
+                      tp-container-select    
+                      ds-name="secondary"
+                    >
+                      <select tp-select id="tp-select" placeholder="+55">
+                        <option placeholder value="" disabled selected>
+                          +55
+                        </option>
+                        <option>+55</option>
+                        <option>+55</option>
+                        <option>+55</option>
+                        <option>+55</option>
+                        <option>+55</option>
+                      </select>
+                      <div tp-select-header>
+                        <p tp-label token="p14">+55</p>
+                        <ion-icon class="med-icon" name="med-baixo"></ion-icon>
+                      </div>
+                      <div tp-select-content>
+                        <ul tp-select-list>
+                          <li tp-select-item>
+                            <p tp-label token="p14">+55</p>
+                          </li>
+                          <li tp-select-item>
+                            <p tp-label token="p14">+55</p>
+                          </li>
+                          <li tp-select-item>
+                            <p tp-label token="p14">+55</p>
+                          </li>
+                          <li tp-select-item>
+                            <p tp-label token="p14">+55</p>
+                          </li>
+                          <li tp-select-item>
+                            <p tp-label token="p14">+55</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                   <div class="trial-telefone__numero">
                     <ion-label token="p14" ds-color="neutral-8"
