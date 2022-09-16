@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { AreaRepository } from '../repositories/area';
-import { ConcursoRepository } from '../repositories/concurso';
-import { EspecialidadeRepository } from '../repositories/especialidade';
-import { GraduacaoRepository } from '../repositories/graduacao';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +8,9 @@ import { GraduacaoRepository } from '../repositories/graduacao';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(private repo: AreaRepository) {}
+  constructor(private repo: AreaRepository, private navCtrl: NavController) {}
 
-  ngOnInit() {
-    this.load();
-  }
-
-  async load() {
-    const result = await this.repo.getAll();
-    console.log('res => ', result);
+  clickHandle() {
+    this.navCtrl.navigateForward('/dados-pessoais');
   }
 }

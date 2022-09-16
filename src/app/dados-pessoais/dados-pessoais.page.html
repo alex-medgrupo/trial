@@ -8,12 +8,13 @@
       <div class="trial-container">
         <div class="trial-row">
           <div class="trial-col trial-col--form">
-            <form class="trial-form">
+            <form [formGroup]="form" class="trial-form" (submit)="save()">
               <div class="trial-input">
                 <ion-label token="p14" ds-color="neutral-8"
                   >Nome completo</ion-label
                 >
                 <ion-input
+                  formControlName="name"
                   mode="md"
                   ds-name="secondary"
                   placeholder="Digite seu nome completo"
@@ -21,14 +22,16 @@
 
                 <div class="trial-telefone margin-top-24">
                   <div class="trial-telefone__ddi">
-                    <ion-label token="p14" ds-color="neutral-8">Pais</ion-label>
+                    <ion-label token="p14" ds-color="neutral-8">País</ion-label>
                     <tp-input-container ds-name="secondary" has-icon="end">
-                      <ion-select
+                      <ion-input
+                        formControlName="country"
                         class="margin-top-8"
                         mode="md"
                         ds-name="secondary"
                         placeholder="+55"
-                      ></ion-select>
+                        readonly
+                      ></ion-input>
                       <!-- <ion-icon class="med-icon" slot="end" name="med-baixo"></ion-icon> VER COM BLEGGI-->
                     </tp-input-container>
                   </div>
@@ -37,6 +40,8 @@
                       >Telefone</ion-label
                     >
                     <ion-input
+                      formControlName="phone"
+                      type="tel"
                       mode="md"
                       ds-name="secondary"
                       placeholder="00 0000000"
@@ -46,6 +51,8 @@
 
                 <ion-label token="p14" ds-color="neutral-8">E-mail</ion-label>
                 <ion-input
+                  formControlName="email"
+                  type="email"
                   mode="md"
                   ds-name="secondary"
                   placeholder="seuemail@gmail.com"
@@ -56,7 +63,9 @@
                     >Digite seu CPF</ion-label
                   >
                   <ion-input
+                    formControlName="cpf"
                     mode="md"
+                    type="number"
                     ds-name="secondary"
                     placeholder="000.000.000-00"
                   ></ion-input>
@@ -75,18 +84,25 @@
                     slot="start"
                     value="value-1"
                     mode="md"
+                    formControlName="accepted"
                   >
                   </ion-checkbox>
                 </ion-item>
 
                 <div class="trial-button margin-top-24">
-                  <ion-button mode="ios" expand="block" fill="clear" no-padding="true"
+                  <!-- <ion-button
+                    mode="ios"
+                    expand="block"
+                    fill="clear"
+                    no-padding="true"
                     >Voltar</ion-button
-                  >
+                  > -->
                   <ion-button
+                    type="submit"
                     mode="ios"
                     expand="block"
                     class="trial-button-color"
+                    [disabled]="!isAccepted()"
                     >Continuar</ion-button
                   >
                 </div>
