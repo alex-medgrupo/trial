@@ -37,7 +37,11 @@ const routes: Routes = [
     path: 'conclusao',
     loadChildren: () =>
       import('./conclusao/conclusao.module').then((m) => m.ConclusaoPageModule),
+  },  {
+    path: 'confirma-dados',
+    loadChildren: () => import('./confirma-dados/confirma-dados.module').then( m => m.ConfirmaDadosPageModule)
   },
+
 ];
 
 @NgModule({
