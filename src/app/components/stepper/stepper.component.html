@@ -3,7 +3,7 @@
     {{ pageTitle }}
   </ion-label>
 
-  <div *ngFor="let step of iterator">
+  <div class="stepper__container" *ngFor="let step of iterator">
     <div
       [ngClass]="{
         'stepper__steps--active': step === activeStep,
