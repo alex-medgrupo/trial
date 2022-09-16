@@ -165,7 +165,10 @@ ion-content {
   }
 
   &__text {
-    color: hsl(var(--med-color-brand-3));
+    color: hsl(var(--med-color-brand-4));
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
   }
 
   .trial-button {
