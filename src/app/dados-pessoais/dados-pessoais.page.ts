@@ -6,7 +6,6 @@ import {
   Validators,
 } from '@angular/forms';
 import { NavController } from '@ionic/angular';
-import { UserTrial } from '../types';
 
 @Component({
   selector: 'app-dados-pessoais',
