@@ -1,4 +1,9 @@
 .trial-revisao {
+  &__title {
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+
   &__item {
     padding: 12px 0 16px 0;
     border-bottom: 1px solid hsl(var(--med-color-neutral-3));
@@ -8,7 +13,7 @@
     }
   }
 
-  .trial-revisao__item {
+  &__item {
     .trial-revisao__dado {
       margin-top: 8px;
     }
