@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { HeaderModule } from '../components/header/header.module';
@@ -17,5 +17,6 @@ import { SeusEstudosPage } from './seus-estudos.page';
     StepperModule,
   ],
   declarations: [SeusEstudosPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class SeusEstudosPageModule {}

@@ -1,6 +1,6 @@
 <div>
   <app-header>
-    <app-stepper end pageTitle="Seus Estudos"></app-stepper>
+    <app-stepper pageTitle="Seus Estudos" [activeStep]="2" end></app-stepper>
   </app-header>
 
   <ion-content>
@@ -83,10 +83,18 @@
             </div>
 
             <div class="trial-button">
-              <ion-button mode="ios" expand="block" fill="clear"
+              <ion-button
+                mode="ios"
+                expand="block"
+                fill="clear"
+                (click)="goBack()"
                 >Voltar</ion-button
               >
-              <ion-button mode="ios" expand="block" class="trial-button-color"
+              <ion-button
+                mode="ios"
+                expand="block"
+                class="trial-button-color"
+                (click)="continue()"
                 >Continuar</ion-button
               >
             </div>
