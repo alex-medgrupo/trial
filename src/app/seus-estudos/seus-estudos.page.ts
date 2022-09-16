@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Faculdade, FaculdadeRepository } from '../repositories/faculdade';
 
 @Component({
   selector: 'app-seus-estudos',
@@ -7,9 +8,24 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./seus-estudos.page.scss'],
 })
 export class SeusEstudosPage implements OnInit {
-  constructor(private navController: NavController) {}
+  faculdades: Faculdade[] = [];
 
-  ngOnInit() {}
+  constructor(
+    private navController: NavController,
+    private faculdadeRepo: FaculdadeRepository
+  ) {}
+
+  ngOnInit() {
+    this.loadAll();
+  }
+
+  loadAll() {
+    Promise.all([this.fetchFaculdades()]);
+  }
+
+  async fetchFaculdades() {
+    this.faculdades = await this.faculdadeRepo.getAll();
+  }
 
   goBack() {
     this.navController.navigateBack(['dados-pessoais']);

@@ -19,7 +19,14 @@
                   mode="md"
                   ds-name="secondary"
                   placeholder="Selecionar"
-                ></ion-select>
+                >
+                  <ion-select-option
+                    [value]="faculdade.id"
+                    *ngFor="let faculdade of faculdades"
+                  >
+                    {{faculdade.description}}
+                  </ion-select-option>
+                </ion-select>
                 <!-- <ion-icon class="med-icon" slot="end" name="med-baixo"></ion-icon> -->
               </tp-input-container>
 
