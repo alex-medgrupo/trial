@@ -1,9 +1,82 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>confirma-dados</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div>
+  <app-header>
+    <app-stepper end pageTitle="Confirma Dados" [activeStep]="1"></app-stepper>
+  </app-header>
 
-<ion-content>
+  <ion-content>
+    <main class="trial-scroll">
+      <div class="trial-container">
+        <div class="trial-row">
+          <div class="trial-col trial-col--form">
+            <form class="trial-form">
+              <div class="trial-input">
+                <div class="trial-revisao">
+                  <div class="trial-revisao__item">
+                    <ion-label tp-label token="p12" ds-color="neutral-8">Nome completo</ion-label>
+                    <ion-label class="trial-revisao__dado" tp-label token="p16xb">
+                      Stephen Rojo Nobile                      
+                    </ion-label>              
+                  </div>
+                  <div class="trial-revisao__item">
+                    <ion-label tp-label token="p12" ds-color="neutral-8">Telefone</ion-label>
+                    <ion-label class="trial-revisao__dado" tp-label token="p16xb">
+                      +55 (11) 99191-0088                      
+                    </ion-label>              
+                  </div>
+                  <div class="trial-revisao__item">
+                    <ion-label tp-label token="p12" ds-color="neutral-8">E-mail</ion-label>
+                    <ion-label class="trial-revisao__dado" tp-label token="p16xb">
+                      nobile@gmail.com
+                    </ion-label>              
+                  </div>
+                  <div class="trial-revisao__item">
+                    <ion-label tp-label token="p12" ds-color="neutral-8">Modalidade</ion-label>
+                    <ion-label class="trial-revisao__dado" tp-label token="p16xb">
+                      Presencial
+                    </ion-label>              
+                  </div>
+                  <div class="trial-revisao__item">
+                    <ion-label tp-label token="p12" ds-color="neutral-8">Curso</ion-label>
+                    <ion-label class="trial-revisao__dado" tp-label token="p16xb">
+                      Pacote trial 2023
+                    </ion-label>              
+                  </div>
+                  <div class="trial-revisao__item">
+                    <ion-label tp-label token="p12" ds-color="neutral-8">Unidade</ion-label>
+                    <ion-label class="trial-revisao__dado" tp-label token="p16xb">
+                      Barra da Tijuca - RJ
+                    </ion-label>              
+                  </div>
+                  <div class="trial-revisao__item">
+                    <ion-label tp-label token="p12" ds-color="neutral-8">Turma 1</ion-label>
+                    <ion-label class="trial-revisao__dado" tp-label token="p16xb">
+                      MEDCURSO - Terças  16h às 22h
+                    </ion-label>              
+                  </div>
+                  <div class="trial-revisao__item">
+                    <ion-label tp-label token="p12" ds-color="neutral-8">Turma 2</ion-label>
+                    <ion-label class="trial-revisao__dado" tp-label token="p16xb">
+                      MED - Quintas  16h às 22h
+                    </ion-label>              
+                  </div>
+                </div>
+              </div>            
 
-</ion-content>
+                <div class="trial-button margin-top-24">
+                  <ion-button mode="ios" expand="block" fill="clear" no-padding="true"
+                    >Voltar</ion-button
+                  >
+                  <ion-button
+                    mode="ios"
+                    expand="block"
+                    class="trial-button-color"
+                    >Continuar</ion-button
+                  >
+                </div>          
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </ion-content>
+</div>
