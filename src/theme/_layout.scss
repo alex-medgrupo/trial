@@ -60,6 +60,10 @@ ion-content {
     flex-direction: column;
     margin-top: 0;
   }
+
+  &--button {
+    margin-top: 0;
+  }
 }
 
 .trial-col {
@@ -72,6 +76,10 @@ ion-content {
       margin-top: 24px;
       display: block;
     }
+  }
+
+  &--button {
+    flex: 1;
   }
 }
 

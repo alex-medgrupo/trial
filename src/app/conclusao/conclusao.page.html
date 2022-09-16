@@ -4,9 +4,10 @@
   </app-header>
 
   <ion-content>
-    <main class="trial-container trial-container--main">
-      <div class="trial-row trial-row--center-left">
-        <div class="trial-col trial-col--center-left">
+    <main class="trial-scroll">
+    <div class="trial-container">
+      <div class="trial-row">
+        <div class="trial-col">
           <div class="trial-text-container">
             <ion-label class="trial-title" token="h48x">
               Cadastro realizado
@@ -18,30 +19,41 @@
               </ion-label>
             </ion-label>
             <ion-label class="margin-top-24" token="p16x" ds-color="neutral-8"
-              >Você receberá um e-mail com todas as instruções para baixar o
-              aplicativo MEDSoft.
+              >A partir de agora, seu CPF fica habilitado para criar um perfil no MEDSoft.
             </ion-label>
-          </div>
-          <div class="trial-button">
-            <ion-button mode="ios" fill="clear">
-              <svg slot="start" class="med-icon">
-                <use xlink:href="assets/icon/symbol-defs.svg#icon-email"></use>
-              </svg>
-              <!-- <ion-icon
-                slot="start"
-                class="med-icon"
-                name="med-email"
-              ></ion-icon> -->
-              <ion-label token="p16b">
-                Não recebi o e-mail.
-                <ion-label token="p16b" ds-color="brand">
-                  Enviar novamente
-                </ion-label>
-              </ion-label>
-            </ion-button>
+            <ion-label class="margin-top-24" token="p16x" ds-color="neutral-8"
+              >Você deve baixar o aplicativo do MEDGRUPO nas lojas Apple Store ou Google Play e cadastrar uma senha.
+            </ion-label>
+            <ion-label class="margin-top-24" token="p16x" ds-color="neutral-8"
+              >Essa experiência é gratuita e você terá acesso a três semanas de aula, além de todas as outras funcionalidades.
+            </ion-label>
+            <ion-label class="margin-top-24" token="p16x" ds-color="neutral-8"
+              >Boa experiência MEDGRUPO!
+            </ion-label>
           </div>
         </div>
       </div>
+      <div class="trial-row trial-row--button">
+        <div class="trial-col trial-col--button">
+          <div class="trial-baixe-agora">
+            <ion-label class="trial-baixe-agora__title" token="h20x"
+              >Baixe agora no seu store
+            </ion-label>
+            <div class="trial-button">           
+              <a class="trial-baixe-agora__link trial-baixe-agora__link--windows-mac" href="#">
+                <img class="trial-baixe-agora__imagem trial-baixe-agora__imagem--windows-mac" src="../../assets/img/btn_windows_mac.png" alt="Logos Windows Mac">
+              </a>
+              <a class="trial-baixe-agora__link trial-baixe-agora__link--apple-store" href="#">
+                <img class="trial-baixe-agora__imagem trial-baixe-agora__imagem--apple-store" src="../../assets/img/btn_applestore.png" alt="Logos Apple Store">
+              </a>
+              <a class="trial-baixe-agora__link trial-baixe-agora__link--google-play" href="#">
+                <img class="trial-baixe-agora__imagem trial-baixe-agora__imagem--google-play" src="../../assets/img/btn_google_play.png" alt="Logos Google Play">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>       
+    </div>
     </main>
   </ion-content>
 </div>

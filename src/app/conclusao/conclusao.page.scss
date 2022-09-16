@@ -1,0 +1,59 @@
+.trial-baixe-agora {
+  padding: 40px 24px 24px 24px;
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+
+  .trial-button {
+    padding: 0;
+
+    ion-button {
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+
+      @media only screen and (max-width: 768px) {       
+        flex: 0;        
+      }
+    }
+  }
+
+  &__link {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    &--windows-mac {
+      @media only screen and (max-width: 768px) {       
+        display: none;       
+      }
+    }
+
+    &--apple-store, 
+    &--google-play {
+      display: none;       
+
+      @media only screen and (max-width: 768px) {       
+        display: block;       
+      }
+    }
+  }  
+
+  &__imagem {
+    height: 48px;   
+
+    &--windows-mac {
+      width: 144px;
+    }
+
+    &--apple-store {
+      width: 120px;
+    }
+
+    &--google-play {
+      width: 128px;
+    }
+  } 
+}
