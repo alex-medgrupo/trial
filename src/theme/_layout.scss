@@ -114,8 +114,6 @@ ion-content {
   align-items: center;
 
   ion-button {
-    color: hsl(var(--med-color-neutral-2));
-
     &:not(:last-child) {
       margin-right: 24px;
     }
@@ -124,6 +122,10 @@ ion-content {
       height: 24px;
       width: 24px;
       margin-right: 8px;
+    }
+
+    &.trial-button-color {
+      color: hsl(var(--med-color-neutral-2));
     }
   }
 
@@ -156,5 +158,9 @@ ion-content {
 
   &__text {
     color: hsl(var(--med-color-brand-3));
+  }
+
+  .trial-button {
+    padding: 0;
   }
 }

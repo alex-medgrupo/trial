@@ -6,6 +6,19 @@
     display: none;
   }
 
+  &__dados {
+    margin-right: 16px;
+
+    @media only screen and (max-width: 768px) {
+      margin-right: 12px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
   &__steps {
     height: 24px;
     min-width: 24px;
@@ -45,18 +58,14 @@
     }
   }
 
-  &__dados {
-    margin-right: 16px;
-
-    @media only screen and (max-width: 768px) {
-      margin-right: 12px;
-    }
-  }
-
   &__line {
     width: 12px;
     height: 0;
     border-bottom: 1px dashed hsl(var(--med-color-neutral-3));
     margin: 0 4px;
+
+    &--none {
+      display: none;
+    }
   }
 }
