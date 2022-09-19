@@ -16,6 +16,8 @@ import {
 import { Faculdade, FaculdadeRepository } from '../repositories/faculdade';
 import { Graduacao, GraduacaoRepository } from '../repositories/graduacao';
 
+import { WizardService } from '../wizard.service';
+
 @Component({
   selector: 'app-seus-estudos',
   templateUrl: './seus-estudos.page.html',
@@ -37,7 +39,7 @@ export class SeusEstudosPage implements OnInit {
     private concursoRepo: ConcursoRepository,
     private especialidadeRepo: EspecialidadeRepository,
     private graduacaoRepo: GraduacaoRepository,
-    private fb: FormBuilder
+    private wizard: WizardService
   ) {}
 
   get especialidadeControl() {
@@ -49,13 +51,7 @@ export class SeusEstudosPage implements OnInit {
   }
 
   ngOnInit() {
-    this.form = this.fb.group({
-      faculdade: [null, Validators.required],
-      graduacao: [null, Validators.required],
-      area: [null, Validators.required],
-      especialidade: [null, Validators.required],
-      concurso: [null, Validators.required],
-    });
+    this.form = this.wizard.preferences;
 
     this.loadAll();
   }

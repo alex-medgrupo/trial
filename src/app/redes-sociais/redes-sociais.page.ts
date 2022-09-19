@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
+import { WizardService } from '../wizard.service';
 
 @Component({
   selector: 'app-redes-sociais',
@@ -27,13 +28,13 @@ export class RedesSociaisPage implements OnInit {
 
   form!: FormGroup;
 
-  constructor(private fb: FormBuilder, private navController: NavController) {}
+  constructor(
+    private wizard: WizardService,
+    private navController: NavController
+  ) {}
 
   ngOnInit() {
-    this.form = this.fb.group({
-      socialNetwork: [null, Validators.required],
-      address: [null],
-    });
+    this.form = this.wizard.socialNetwork;
   }
 
   getControl(name: string) {
