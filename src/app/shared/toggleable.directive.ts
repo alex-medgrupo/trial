@@ -19,8 +19,6 @@ export class ToggleableDirective implements OnInit {
   @HostListener('click', ['$event']) toggle(e?: any) {
     e?.stopPropagation();
 
-    console.log('!!!');
-
     this.currentValue = !this.currentValue;
   }
 

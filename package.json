@@ -26,6 +26,7 @@
     "@capacitor/status-bar": "4.0.1",
     "@ionic/angular": "^6.2.2",
     "@ionic/core": "git+https://github.com/MEDGRUPOGIT/med-components.git#e68052908b8fc3cb3976de95fe6878af16549479",
+    "cpf-cnpj-validator": "^1.0.3",
     "ionicons": "^6.0.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",

@@ -32,14 +32,6 @@
                       {{faculdade.description}}
                     </option>
                   </select>
-                  <p
-                    tp-label
-                    tp-input-help
-                    token="p12x"
-                    *ngIf="isInvalid(getControl('faculdade'))"
-                  >
-                    Faculdade é obrigatório
-                  </p>
 
                   <div tp-select-header>
                     <p tp-label token="p14">
@@ -60,6 +52,14 @@
                     </ul>
                   </div>
                 </div>
+                <ion-label
+                  ds-color="warning"
+                  class="trial-estudos__aviso"
+                  token="p12x"
+                  *ngIf="isInvalid(getControl('faculdade'))"
+                >
+                  Faculdade é obrigatório
+                </ion-label>
 
                 <ion-label token="p14" ds-color="neutral-8"
                   >Ano de formação</ion-label
@@ -85,9 +85,6 @@
                       {{graduacao.description}}
                     </option>
                   </select>
-                  <p tp-label tp-input-help token="p12x">
-                    Ano de Formação é obrigatório
-                  </p>
                   <div tp-select-header>
                     <p tp-label token="p14">
                       {{findDescription(graduacoes,
@@ -107,6 +104,13 @@
                     </ul>
                   </div>
                 </div>
+                <ion-label
+                  ds-color="warning"
+                  class="trial-estudos__aviso"
+                  token="p12x"
+                >
+                  Ano de Formação é obrigatório
+                </ion-label>
 
                 <ion-label token="p14" ds-color="neutral-8">Objetivo</ion-label>
                 <div
@@ -123,10 +127,6 @@
                       {{area.description}}
                     </option>
                   </select>
-
-                  <p tp-label tp-input-help token="p12x">
-                    Objetivo é obrigatório
-                  </p>
 
                   <div tp-select-header>
                     <p tp-label token="p14">
@@ -146,6 +146,9 @@
                     </ul>
                   </div>
                 </div>
+                <ion-label class="trial-estudos__aviso" token="p12x">
+                  Objetivo é obrigatório
+                </ion-label>
 
                 <ion-label token="p14" ds-color="neutral-8"
                   >Especialidade dos seus sonhos</ion-label
@@ -172,9 +175,6 @@
                       {{especialidade.description}}
                     </option>
                   </select>
-                  <p tp-label tp-input-help token="p12x">
-                    Especialidade é obrigatório
-                  </p>
 
                   <div tp-select-header>
                     <p tp-label token="p14">
@@ -197,6 +197,9 @@
                     </ul>
                   </div>
                 </div>
+                <ion-label class="trial-estudos__aviso" token="p12x">
+                  Especialidade é obrigatório
+                </ion-label>
 
                 <ion-label token="p14" ds-color="neutral-8"
                   >Concurso dos seus sonhos</ion-label
@@ -219,10 +222,6 @@
                     </option>
                   </select>
 
-                  <p tp-label tp-input-help token="p12x">
-                    Concurso é obrigatório
-                  </p>
-
                   <div tp-select-header>
                     <p tp-label token="p14">
                       {{findDescription(concursos,
@@ -242,6 +241,9 @@
                     </ul>
                   </div>
                 </div>
+                <ion-label class="trial-estudos__aviso" token="p12x">
+                  Concurso é obrigatório
+                </ion-label>
               </div>
 
               <div class="trial-button">

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { NavController } from '@ionic/angular';
+import { AlunoRepository } from '../repositories/aluno';
 import { WizardService } from '../wizard.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class DadosPessoaisPage implements OnInit {
 
   constructor(
     private wizard: WizardService,
-    private navController: NavController
+    private navController: NavController,
+    private alunoRepo: AlunoRepository
   ) {}
 
   get accepted() {
@@ -29,13 +31,17 @@ export class DadosPessoaisPage implements OnInit {
     return !!this.accepted?.valid;
   }
 
-  save() {
-    console.log('valid ?', this.form.valid);
+  async save() {
+    if (this.form.valid) {
+      const { email, cpf } = this.form.value;
+      const exists = await this.alunoRepo.alreadyRegistered(email, cpf);
 
-    console.log('form => ', this.form.value);
-
-    this.navController.navigateForward(['seus-estudos']);
-    // salva no serviço apropriado
-    // se for válido vai para a segunda etapa ->
+      if (exists) {
+        this.navController.navigateForward(['confirma-dados']);
+      } else {
+        this.wizard.next();
+        this.navController.navigateForward(['seus-estudos']);
+      }
+    }
   }
 }

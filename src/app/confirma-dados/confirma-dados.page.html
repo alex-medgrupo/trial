@@ -1,7 +1,5 @@
 <div>
-  <app-header>
-    <app-stepper end pageTitle="Confirma Dados" [activeStep]="1"></app-stepper>
-  </app-header>
+  <app-header></app-header>
 
   <ion-content>
     <main class="trial-scroll">
@@ -10,13 +8,18 @@
           <div class="trial-col">
             <div class="trial-text-container">
               <ion-label class="trial-title trial-title--brand-4" token="h32x">
-                Olá, Fulano!
-              </ion-label>             
-              <ion-label class="margin-top-24" token="p16x" ds-color="neutral-8">
-                O MEDGRUPO agradece sua visita mas, no momento, essa versão do MEDSoft é destinada apenas para novos alunos.
-              </ion-label>             
-          </div>         
-          </div>         
+                Olá, {{name}}!
+              </ion-label>
+              <ion-label
+                class="margin-top-24"
+                token="p16x"
+                ds-color="neutral-8"
+              >
+                O MEDGRUPO agradece sua visita mas, no momento, essa versão do
+                MEDSoft é destinada apenas para novos alunos.
+              </ion-label>
+            </div>
+          </div>
         </div>
       </div>
     </main>
