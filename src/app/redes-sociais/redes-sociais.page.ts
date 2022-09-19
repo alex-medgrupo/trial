@@ -48,9 +48,10 @@ export class RedesSociaisPage implements OnInit {
     return collection.find((c) => c.id === id)?.description ?? 'Selecionar';
   }
 
-  save() {
+  async save() {
     if (this.form.valid) {
-      console.log('redes sociais => ', this.form.value);
+      this.wizard.next();
+      await this.wizard.save();
       this.navController.navigateForward(['conclusao']);
     }
   }

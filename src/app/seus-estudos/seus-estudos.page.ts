@@ -7,6 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { NavController } from '@ionic/angular';
+import { AlunoRepository } from '../repositories/aluno';
 import { Area, AreaRepository } from '../repositories/area';
 import { Concurso, ConcursoRepository } from '../repositories/concurso';
 import {
@@ -68,6 +69,7 @@ export class SeusEstudosPage implements OnInit {
 
   save() {
     if (this.form.valid) {
+      this.wizard.next();
       this.navController.navigateForward(['redes-sociais']);
     }
   }
