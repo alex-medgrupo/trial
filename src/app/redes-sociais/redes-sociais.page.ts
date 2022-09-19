@@ -55,6 +55,6 @@ export class RedesSociaisPage implements OnInit {
   }
 
   goBack() {
-    throw new Error('Method not implemented.');
+    this.navController.navigateBack(['seus-estudos']);
   }
 }
