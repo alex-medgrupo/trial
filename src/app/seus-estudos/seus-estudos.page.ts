@@ -1,4 +1,11 @@
-import { Component, OnInit, TrackByFunction } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {
+  AbstractControl,
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { NavController } from '@ionic/angular';
 import { Area, AreaRepository } from '../repositories/area';
 import { Concurso, ConcursoRepository } from '../repositories/concurso';
@@ -21,16 +28,35 @@ export class SeusEstudosPage implements OnInit {
   especialidades: Especialidade[] = [];
   graduacoes: Graduacao[] = [];
 
+  form!: FormGroup;
+
   constructor(
     private navController: NavController,
     private faculdadeRepo: FaculdadeRepository,
     private areaRepo: AreaRepository,
     private concursoRepo: ConcursoRepository,
     private especialidadeRepo: EspecialidadeRepository,
-    private graduacaoRepo: GraduacaoRepository
+    private graduacaoRepo: GraduacaoRepository,
+    private fb: FormBuilder
   ) {}
 
+  get especialidadeControl() {
+    return this.getControl('especialidade');
+  }
+
+  getControl(name: string): FormControl {
+    return this.form.get(name) as FormControl;
+  }
+
   ngOnInit() {
+    this.form = this.fb.group({
+      faculdade: [null, Validators.required],
+      graduacao: [null, Validators.required],
+      area: [null, Validators.required],
+      especialidade: [null, Validators.required],
+      concurso: [null, Validators.required],
+    });
+
     this.loadAll();
   }
 
@@ -42,6 +68,31 @@ export class SeusEstudosPage implements OnInit {
       this.loadGraduacoes(),
       this.loadEspecialidades(),
     ]);
+  }
+
+  save() {
+    if (this.form.valid) {
+      this.navController.navigateForward(['redes-sociais']);
+    }
+  }
+
+  faculdadeControl() {
+    return this.getControl('faculdade');
+  }
+
+  isInvalid(control: AbstractControl<any, any> | null): boolean {
+    if (!control) {
+      return false;
+    }
+
+    return control.invalid && control.touched;
+  }
+
+  findDescription<T extends { id: string | number; description: string }>(
+    collection: T[],
+    id: string
+  ): string | undefined {
+    return collection.find((c) => c.id === id)?.description ?? 'Selecionar';
   }
 
   async loadFaculdades() {
@@ -66,10 +117,6 @@ export class SeusEstudosPage implements OnInit {
 
   goBack() {
     this.navController.navigateBack(['dados-pessoais']);
-  }
-
-  continue() {
-    this.navController.navigateForward(['conclusao']);
   }
 
   trackById(index: number, item: any): string {

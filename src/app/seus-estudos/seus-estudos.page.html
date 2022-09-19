@@ -8,7 +8,12 @@
       <div class="trial-container">
         <div class="trial-row">
           <div class="trial-col trial-col--form">
-            <form class="trial-form">
+            <form
+              [formGroup]="form"
+              (ngSubmit)="save()"
+              class="trial-form"
+              appToggleableContainer
+            >
               <div class="trial-input">
                 <ion-label token="p14" ds-color="neutral-8"
                   >Em qual faculdade você estuda?</ion-label
@@ -16,6 +21,7 @@
                 <div
                   class="margin-top-8"
                   tp-container-select
+                  appToggleable
                   ds-name="secondary"
                 >
                   <select tp-select id="tp-select" placeholder="Selecionar">
@@ -26,26 +32,30 @@
                       {{faculdade.description}}
                     </option>
                   </select>
+                  <p
+                    tp-label
+                    tp-input-help
+                    token="p12x"
+                    *ngIf="isInvalid(getControl('faculdade'))"
+                  >
+                    Faculdade é obrigatório
+                  </p>
+
                   <div tp-select-header>
-                    <p tp-label token="p14">Selecionar</p>
+                    <p tp-label token="p14">
+                      {{findDescription(faculdades,
+                      form.get('faculdade')?.value)}}
+                    </p>
                     <ion-icon class="med-icon" name="med-baixo"></ion-icon>
                   </div>
                   <div tp-select-content>
                     <ul tp-select-list>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
+                      <li
+                        tp-select-item
+                        *ngFor="let faculdade of faculdades; trackBy: trackById"
+                        (click)="getControl('faculdade').setValue(faculdade.id)"
+                      >
+                        <p tp-label token="p14">{{faculdade.description}}</p>
                       </li>
                     </ul>
                   </div>
@@ -56,39 +66,43 @@
                 >
                 <div
                   class="margin-top-8"
+                  appToggleable
                   tp-container-select
                   ds-name="secondary"
                 >
-                  <select tp-select id="tp-select" placeholder="Selecionar">
+                  <select
+                    formControlName="graduacao"
+                    tp-select
+                    id="tp-select"
+                    placeholder="Selecionar"
+                  >
                     <option placeholder value="" disabled selected>
                       Selecionar
                     </option>
-                    <option>Selecionar</option>
-                    <option>Selecionar</option>
-                    <option>Selecionar</option>
-                    <option>Selecionar</option>
-                    <option>Selecionar</option>
+                    <option
+                      *ngFor="let graduacao of graduacoes; trackBy: trackById"
+                    >
+                      {{graduacao.description}}
+                    </option>
                   </select>
+                  <p tp-label tp-input-help token="p12x">
+                    Ano de Formação é obrigatório
+                  </p>
                   <div tp-select-header>
-                    <p tp-label token="p14">Selecionar</p>
+                    <p tp-label token="p14">
+                      {{findDescription(graduacoes,
+                      form.get('graduacao')?.value)}}
+                    </p>
                     <ion-icon class="med-icon" name="med-baixo"></ion-icon>
                   </div>
                   <div tp-select-content>
                     <ul tp-select-list>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
+                      <li
+                        (click)="form.get('graduacao')?.setValue(graduacao.id)"
+                        *ngFor="let graduacao of graduacoes; trackBy: trackById"
+                        tp-select-item
+                      >
+                        <p tp-label token="p14">{{graduacao.description}}</p>
                       </li>
                     </ul>
                   </div>
@@ -98,38 +112,36 @@
                 <div
                   class="margin-top-8"
                   tp-container-select
+                  appToggleable
                   ds-name="secondary"
                 >
                   <select tp-select id="tp-select" placeholder="Selecionar">
                     <option placeholder value="" disabled selected>
                       Selecionar
                     </option>
-                    <option>Selecionar</option>
-                    <option>Selecionar</option>
-                    <option>Selecionar</option>
-                    <option>Selecionar</option>
-                    <option>Selecionar</option>
+                    <option *ngFor="let area of areas; trackBy: trackById">
+                      {{area.description}}
+                    </option>
                   </select>
+
+                  <p tp-label tp-input-help token="p12x">
+                    Objetivo é obrigatório
+                  </p>
+
                   <div tp-select-header>
-                    <p tp-label token="p14">Selecionar</p>
+                    <p tp-label token="p14">
+                      {{findDescription(areas, form.get('area')?.value)}}
+                    </p>
                     <ion-icon class="med-icon" name="med-baixo"></ion-icon>
                   </div>
                   <div tp-select-content>
                     <ul tp-select-list>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
+                      <li
+                        *ngFor="let area of areas; trackBy: trackById"
+                        (click)="form.get('area')?.setValue(area.id)"
+                        tp-select-item
+                      >
+                        <p tp-label token="p14">{{area.description}}</p>
                       </li>
                     </ul>
                   </div>
@@ -141,39 +153,46 @@
                 <div
                   class="margin-top-8"
                   tp-container-select
+                  appToggleable
                   ds-name="secondary"
                 >
-                  <select tp-select id="tp-select" placeholder="Selecionar">
+                  <select
+                    formControlName="especialidade"
+                    tp-select
+                    id="tp-select"
+                    placeholder="Selecionar"
+                  >
                     <option placeholder value="" disabled selected>
                       Selecionar
                     </option>
                     <option
-                      [value]="especialidade.id"
+                      [ngValue]="especialidade.id"
                       *ngFor="let especialidade of especialidades; trackBy: trackById"
                     >
                       {{especialidade.description}}
                     </option>
                   </select>
+                  <p tp-label tp-input-help token="p12x">
+                    Especialidade é obrigatório
+                  </p>
+
                   <div tp-select-header>
-                    <p tp-label token="p14">Selecionar</p>
+                    <p tp-label token="p14">
+                      {{findDescription(especialidades,
+                      especialidadeControl.value)}}
+                    </p>
                     <ion-icon class="med-icon" name="med-baixo"></ion-icon>
                   </div>
                   <div tp-select-content>
                     <ul tp-select-list>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
+                      <li
+                        *ngFor="let especialidade of especialidades; trackBy: trackById"
+                        (click)="especialidadeControl.setValue(especialidade.id)"
+                        tp-select-item
+                      >
+                        <p tp-label token="p14">
+                          {{especialidade.description}}
+                        </p>
                       </li>
                     </ul>
                   </div>
@@ -185,38 +204,40 @@
                 <div
                   class="margin-top-8"
                   tp-container-select
+                  appToggleable
                   ds-name="secondary"
                 >
                   <select tp-select id="tp-select" placeholder="Selecionar">
-                    <option placeholder value="" disabled selected>
-                      Selecionar
+                    <option
+                      *ngFor="let concurso of concursos; trackBy: trackById"
+                      placeholder
+                      value=""
+                      disabled
+                      selected
+                    >
+                      {{concurso.description}}
                     </option>
-                    <option>Selecionar</option>
-                    <option>Selecionar</option>
-                    <option>Selecionar</option>
-                    <option>Selecionar</option>
-                    <option>Selecionar</option>
                   </select>
+
+                  <p tp-label tp-input-help token="p12x">
+                    Concurso é obrigatório
+                  </p>
+
                   <div tp-select-header>
-                    <p tp-label token="p14">Selecionar</p>
+                    <p tp-label token="p14">
+                      {{findDescription(concursos,
+                      form.get('concurso')?.value)}}
+                    </p>
                     <ion-icon class="med-icon" name="med-baixo"></ion-icon>
                   </div>
                   <div tp-select-content>
                     <ul tp-select-list>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
-                      </li>
-                      <li tp-select-item>
-                        <p tp-label token="p14">Selecionar</p>
+                      <li
+                        (click)="form.get('concurso')?.setValue(concurso.id)"
+                        *ngFor="let concurso of concursos; trackBy: trackById"
+                        tp-select-item
+                      >
+                        <p tp-label token="p14">{{concurso.description}}</p>
                       </li>
                     </ul>
                   </div>
@@ -234,9 +255,9 @@
                 >
                 <ion-button
                   mode="ios"
+                  type="submit"
                   expand="block"
                   class="trial-button-color"
-                  (click)="continue()"
                   >Continuar</ion-button
                 >
               </div>
