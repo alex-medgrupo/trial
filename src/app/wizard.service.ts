@@ -65,7 +65,7 @@ export class WizardService {
       socialNetwork: { socialNetwork: IdRedeSocial, address: RedeSocial },
     } = this.form.value;
 
-    const Celular = this.form.value.country + this.form.value.phone;
+    const Celular = this.personal.value.country + this.personal.value.phone;
 
     const data = {
       Registro,
