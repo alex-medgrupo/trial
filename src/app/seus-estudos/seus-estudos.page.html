@@ -5,246 +5,245 @@
 
   <ion-content>
     <main class="trial-scroll">
-    <div class="trial-container">
-      <div class="trial-row">     
-        <div class="trial-col trial-col--form">
-          <form class="trial-form">
-            <div class="trial-input">
-              <ion-label token="p14" ds-color="neutral-8"
-                >Em qual faculdade você estuda?</ion-label
-              >
-              <div
-                class="margin-top-8"
-                tp-container-select    
-                ds-name="secondary"
-              >
-                <select tp-select id="tp-select" placeholder="Selecionar">
-                <option placeholder value="" disabled selected>
-                  Selecionar
-                  </option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                </select>
-                <div tp-select-header>
-                  <p tp-label token="p14">Selecionar</p>
-                  <ion-icon class="med-icon" name="med-baixo"></ion-icon>
+      <div class="trial-container">
+        <div class="trial-row">
+          <div class="trial-col trial-col--form">
+            <form class="trial-form">
+              <div class="trial-input">
+                <ion-label token="p14" ds-color="neutral-8"
+                  >Em qual faculdade você estuda?</ion-label
+                >
+                <div
+                  class="margin-top-8"
+                  tp-container-select
+                  ds-name="secondary"
+                >
+                  <select tp-select id="tp-select" placeholder="Selecionar">
+                    <option
+                      [value]="faculdade.id"
+                      *ngFor="let faculdade of faculdades; trackBy: trackById"
+                    >
+                      {{faculdade.description}}
+                    </option>
+                  </select>
+                  <div tp-select-header>
+                    <p tp-label token="p14">Selecionar</p>
+                    <ion-icon class="med-icon" name="med-baixo"></ion-icon>
+                  </div>
+                  <div tp-select-content>
+                    <ul tp-select-list>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div tp-select-content>
-                  <ul tp-select-list>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                  </ul>
+
+                <ion-label token="p14" ds-color="neutral-8"
+                  >Ano de formação</ion-label
+                >
+                <div
+                  class="margin-top-8"
+                  tp-container-select
+                  ds-name="secondary"
+                >
+                  <select tp-select id="tp-select" placeholder="Selecionar">
+                    <option placeholder value="" disabled selected>
+                      Selecionar
+                    </option>
+                    <option>Selecionar</option>
+                    <option>Selecionar</option>
+                    <option>Selecionar</option>
+                    <option>Selecionar</option>
+                    <option>Selecionar</option>
+                  </select>
+                  <div tp-select-header>
+                    <p tp-label token="p14">Selecionar</p>
+                    <ion-icon class="med-icon" name="med-baixo"></ion-icon>
+                  </div>
+                  <div tp-select-content>
+                    <ul tp-select-list>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <ion-label token="p14" ds-color="neutral-8">Objetivo</ion-label>
+                <div
+                  class="margin-top-8"
+                  tp-container-select
+                  ds-name="secondary"
+                >
+                  <select tp-select id="tp-select" placeholder="Selecionar">
+                    <option placeholder value="" disabled selected>
+                      Selecionar
+                    </option>
+                    <option>Selecionar</option>
+                    <option>Selecionar</option>
+                    <option>Selecionar</option>
+                    <option>Selecionar</option>
+                    <option>Selecionar</option>
+                  </select>
+                  <div tp-select-header>
+                    <p tp-label token="p14">Selecionar</p>
+                    <ion-icon class="med-icon" name="med-baixo"></ion-icon>
+                  </div>
+                  <div tp-select-content>
+                    <ul tp-select-list>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <ion-label token="p14" ds-color="neutral-8"
+                  >Especialidade dos seus sonhos</ion-label
+                >
+                <div
+                  class="margin-top-8"
+                  tp-container-select
+                  ds-name="secondary"
+                >
+                  <select tp-select id="tp-select" placeholder="Selecionar">
+                    <option placeholder value="" disabled selected>
+                      Selecionar
+                    </option>
+                    <option
+                      [value]="especialidade.id"
+                      *ngFor="let especialidade of especialidades; trackBy: trackById"
+                    >
+                      {{especialidade.description}}
+                    </option>
+                  </select>
+                  <div tp-select-header>
+                    <p tp-label token="p14">Selecionar</p>
+                    <ion-icon class="med-icon" name="med-baixo"></ion-icon>
+                  </div>
+                  <div tp-select-content>
+                    <ul tp-select-list>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <ion-label token="p14" ds-color="neutral-8"
+                  >Concurso dos seus sonhos</ion-label
+                >
+                <div
+                  class="margin-top-8"
+                  tp-container-select
+                  ds-name="secondary"
+                >
+                  <select tp-select id="tp-select" placeholder="Selecionar">
+                    <option placeholder value="" disabled selected>
+                      Selecionar
+                    </option>
+                    <option>Selecionar</option>
+                    <option>Selecionar</option>
+                    <option>Selecionar</option>
+                    <option>Selecionar</option>
+                    <option>Selecionar</option>
+                  </select>
+                  <div tp-select-header>
+                    <p tp-label token="p14">Selecionar</p>
+                    <ion-icon class="med-icon" name="med-baixo"></ion-icon>
+                  </div>
+                  <div tp-select-content>
+                    <ul tp-select-list>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                      <li tp-select-item>
+                        <p tp-label token="p14">Selecionar</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
-              <ion-label token="p14" ds-color="neutral-8"
-                >Ano de formação</ion-label
-              >
-              <div
-                class="margin-top-8"
-                tp-container-select    
-                ds-name="secondary"
-              >
-                <select tp-select id="tp-select" placeholder="Selecionar">
-                <option placeholder value="" disabled selected>
-                  Selecionar
-                  </option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                </select>
-                <div tp-select-header>
-                  <p tp-label token="p14">Selecionar</p>
-                  <ion-icon class="med-icon" name="med-baixo"></ion-icon>
-                </div>
-                <div tp-select-content>
-                  <ul tp-select-list>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                  </ul>
-                </div>
+              <div class="trial-button">
+                <ion-button
+                  mode="ios"
+                  expand="block"
+                  fill="clear"
+                  no-padding="true"
+                  (click)="goBack()"
+                  >Voltar</ion-button
+                >
+                <ion-button
+                  mode="ios"
+                  expand="block"
+                  class="trial-button-color"
+                  (click)="continue()"
+                  >Continuar</ion-button
+                >
               </div>
-
-              <ion-label token="p14" ds-color="neutral-8">Objetivo</ion-label>
-              <div
-              class="margin-top-8"
-              tp-container-select    
-              ds-name="secondary"
-            >
-              <select tp-select id="tp-select" placeholder="Selecionar">
-              <option placeholder value="" disabled selected>
-                Selecionar
-                </option>
-                <option>Selecionar</option>
-                <option>Selecionar</option>
-                <option>Selecionar</option>
-                <option>Selecionar</option>
-                <option>Selecionar</option>
-              </select>
-              <div tp-select-header>
-                <p tp-label token="p14">Selecionar</p>
-                <ion-icon class="med-icon" name="med-baixo"></ion-icon>
-              </div>
-              <div tp-select-content>
-                <ul tp-select-list>
-                  <li tp-select-item>
-                    <p tp-label token="p14">Selecionar</p>
-                  </li>
-                  <li tp-select-item>
-                    <p tp-label token="p14">Selecionar</p>
-                  </li>
-                  <li tp-select-item>
-                    <p tp-label token="p14">Selecionar</p>
-                  </li>
-                  <li tp-select-item>
-                    <p tp-label token="p14">Selecionar</p>
-                  </li>
-                  <li tp-select-item>
-                    <p tp-label token="p14">Selecionar</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-              <ion-label token="p14" ds-color="neutral-8"
-                >Especialidade dos seus sonhos</ion-label
-              >
-              <div
-              class="margin-top-8"
-              tp-container-select    
-              ds-name="secondary"
-            >
-              <select tp-select id="tp-select" placeholder="Selecionar">
-              <option placeholder value="" disabled selected>
-                Selecionar
-                </option>
-                <option>Selecionar</option>
-                <option>Selecionar</option>
-                <option>Selecionar</option>
-                <option>Selecionar</option>
-                <option>Selecionar</option>
-              </select>
-              <div tp-select-header>
-                <p tp-label token="p14">Selecionar</p>
-                <ion-icon class="med-icon" name="med-baixo"></ion-icon>
-              </div>
-              <div tp-select-content>
-                <ul tp-select-list>
-                  <li tp-select-item>
-                    <p tp-label token="p14">Selecionar</p>
-                  </li>
-                  <li tp-select-item>
-                    <p tp-label token="p14">Selecionar</p>
-                  </li>
-                  <li tp-select-item>
-                    <p tp-label token="p14">Selecionar</p>
-                  </li>
-                  <li tp-select-item>
-                    <p tp-label token="p14">Selecionar</p>
-                  </li>
-                  <li tp-select-item>
-                    <p tp-label token="p14">Selecionar</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-              <ion-label token="p14" ds-color="neutral-8"
-                >Concurso dos seus sonhos</ion-label
-              >
-              <div
-                class="margin-top-8"
-                tp-container-select    
-                ds-name="secondary"
-              >
-                <select tp-select id="tp-select" placeholder="Selecionar">
-                <option placeholder value="" disabled selected>
-                  Selecionar
-                  </option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                </select>
-                <div tp-select-header>
-                  <p tp-label token="p14">Selecionar</p>
-                  <ion-icon class="med-icon" name="med-baixo"></ion-icon>
-                </div>
-                <div tp-select-content>
-                  <ul tp-select-list>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="trial-button">
-              <ion-button
-                mode="ios"
-                expand="block"
-                fill="clear"
-                no-padding="true"
-                (click)="goBack()"
-                >Voltar</ion-button
-              >
-              <ion-button
-                mode="ios"
-                expand="block"
-                class="trial-button-color"
-                (click)="continue()"
-                >Continuar</ion-button
-              >
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
     </main>
   </ion-content>
 </div>

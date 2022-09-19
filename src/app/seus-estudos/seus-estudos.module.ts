@@ -4,7 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { HeaderModule } from '../components/header/header.module';
 import { StepperModule } from '../components/stepper/stepper.module';
+import { AreaRepository } from '../repositories/area';
+import { ConcursoRepository } from '../repositories/concurso';
+import { EspecialidadeRepository } from '../repositories/especialidade';
 import { FaculdadeRepository } from '../repositories/faculdade';
+import { GraduacaoRepository } from '../repositories/graduacao';
 import { SeusEstudosPageRoutingModule } from './seus-estudos-routing.module';
 import { SeusEstudosPage } from './seus-estudos.page';
 
@@ -17,7 +21,14 @@ import { SeusEstudosPage } from './seus-estudos.page';
     HeaderModule,
     StepperModule,
   ],
-  providers: [FaculdadeRepository],
+  providers: [
+    FaculdadeRepository,
+    AreaRepository,
+    AreaRepository,
+    ConcursoRepository,
+    EspecialidadeRepository,
+    GraduacaoRepository,
+  ],
   declarations: [SeusEstudosPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
