@@ -29,8 +29,8 @@ export class WizardService {
       }),
 
       socialNetwork: this.fb.group({
-        socialNetwork: [null, Validators.required],
-        address: [null],
+        socialNetwork: [],
+        address: [],
       }),
     });
   }
