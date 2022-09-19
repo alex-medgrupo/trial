@@ -31,15 +31,7 @@
                     >
                       {{faculdade.description}}
                     </option>
-                  </select>
-                  <p
-                    tp-label
-                    tp-input-help
-                    token="p12x"
-                    *ngIf="isInvalid(getControl('faculdade'))"
-                  >
-                    Faculdade é obrigatório
-                  </p>
+                  </select>                  
 
                   <div tp-select-header>
                     <p tp-label token="p14">
@@ -60,6 +52,13 @@
                     </ul>
                   </div>
                 </div>
+                <ion-label
+                    class="trial-estudos__aviso"
+                    token="p12x"
+                    *ngIf="isInvalid(getControl('faculdade'))"
+                  >
+                    Faculdade é obrigatório
+                  </ion-label>
 
                 <ion-label token="p14" ds-color="neutral-8"
                   >Ano de formação</ion-label
@@ -104,7 +103,7 @@
                     </ul>
                   </div>
                 </div>
-                <ion-label token="p12x">
+                <ion-label class="trial-estudos__aviso" token="p12x">
                     Ano de Formação é obrigatório
                 </ion-label>
 
@@ -142,7 +141,7 @@
                     </ul>
                   </div>
                 </div>
-                <ion-label token="p12x">
+                <ion-label class="trial-estudos__aviso" token="p12x">
                   Objetivo é obrigatório
                 </ion-label>
 
@@ -193,7 +192,7 @@
                     </ul>
                   </div>
                 </div>
-                <ion-label token="p12x" ds-color="neutral-10">
+                <ion-label class="trial-estudos__aviso" token="p12x">
                   Especialidade é obrigatório
                 </ion-label>
 
@@ -237,7 +236,7 @@
                     </ul>
                   </div>
                 </div>
-                <ion-label token="p12x" ds-color="neutral-10">
+                <ion-label class="trial-estudos__aviso" token="p12x">
                   Concurso é obrigatório
                 </ion-label>
               </div>
