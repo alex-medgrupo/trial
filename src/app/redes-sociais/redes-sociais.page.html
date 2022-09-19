@@ -5,76 +5,85 @@
 
   <ion-content>
     <main class="trial-scroll">
-    <div class="trial-container">
-      <div class="trial-row">  
-        <div class="trial-col trial-col--form">
-          <form class="trial-form">
-            <div class="trial-input">
-              <ion-label token="p14" ds-color="neutral-8"
-                >Qual é a rede social que você mais usa?</ion-label
-              >
-              <div
-                class="margin-top-8"
-                tp-container-select    
-                ds-name="secondary"
-              >
-                <select tp-select id="tp-select" placeholder="Selecionar">
-                <option placeholder value="" disabled selected>
-                  Selecionar
-                  </option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                  <option>Selecionar</option>
-                </select>
-                <div tp-select-header>
-                  <p tp-label token="p14">Selecionar</p>
-                  <ion-icon class="med-icon" name="med-baixo"></ion-icon>
+      <div class="trial-container">
+        <div class="trial-row">
+          <div class="trial-col trial-col--form">
+            <form class="trial-form" [formGroup]="form" (submit)="save()">
+              <div class="trial-input">
+                <ion-label token="p14" ds-color="neutral-8"
+                  >Qual é a rede social que você mais usa?</ion-label
+                >
+                <div
+                  class="margin-top-8"
+                  tp-container-select
+                  ds-name="secondary"
+                  appToggleable
+                >
+                  <select
+                    tp-select
+                    formControlName="socialNetwork"
+                    id="tp-select"
+                    placeholder="Selecionar"
+                  >
+                    <option placeholder value="" disabled selected>
+                      Selecionar
+                    </option>
+                    <option [ngValue]="rede.id" *ngFor="let rede of redes">
+                      {{rede.description}}
+                    </option>
+                  </select>
+                  <div tp-select-header>
+                    <p tp-label token="p14">
+                      {{findDescription(redes,
+                      getControl('socialNetwork').value)}}
+                    </p>
+                    <ion-icon class="med-icon" name="med-baixo"></ion-icon>
+                  </div>
+                  <div tp-select-content>
+                    <ul tp-select-list>
+                      <li
+                        tp-select-item
+                        (click)="getControl('socialNetwork').setValue(rede.id)"
+                        *ngFor="let rede of redes"
+                      >
+                        <p tp-label token="p14">{{rede.description}}</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div tp-select-content>
-                  <ul tp-select-list>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                    <li tp-select-item>
-                      <p tp-label token="p14">Selecionar</p>
-                    </li>
-                  </ul>
-                </div>
+
+                <ion-label token="p14" ds-color="neutral-8"
+                  >Digite o endereço
+                </ion-label>
+                <ion-input
+                  formControlName="address"
+                  mode="md"
+                  ds-name="secondary"
+                  placeholder="@usename"
+                ></ion-input>
               </div>
 
-              <ion-label token="p14" ds-color="neutral-8"
-                >Digite o endereço </ion-label
-              >
-              <ion-input
-                mode="md"
-                ds-name="secondary"
-                placeholder="@usename"
-              ></ion-input>
-            </div>
-
-            <div class="trial-button">
-              <ion-button mode="ios" expand="block" fill="clear" no-padding="true"
-                >Voltar</ion-button
-              >
-              <ion-button mode="ios" expand="block" class="trial-button-color"
-                >Finalizar</ion-button
-              >
-            </div>
-          </form>
+              <div class="trial-button">
+                <ion-button
+                  mode="ios"
+                  expand="block"
+                  fill="clear"
+                  no-padding="true"
+                  (click)="goBack()"
+                  >Voltar</ion-button
+                >
+                <ion-button
+                  type="submit"
+                  mode="ios"
+                  expand="block"
+                  class="trial-button-color"
+                  >Finalizar</ion-button
+                >
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
     </main>
   </ion-content>
 </div>
