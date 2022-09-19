@@ -22,14 +22,26 @@ export class AlunoRepository {
     return result?.MensagemErro;
   }
 
+  async registeredName(email: string, cpf: string): Promise<string> {
+    const result = await this.http.post<{
+      Sucesso: boolean;
+      Nome?: string;
+    }>(AlunoRepository.baseUrl + '/Validar', {
+      Registro: cpf,
+      Email: email,
+    });
+
+    return result.Nome ?? '';
+  }
+
   async alreadyRegistered(email: string, cpf: string): Promise<boolean> {
-    const result = await this.http.post<SignUpResponseDto>(
-      AlunoRepository.baseUrl + '/Validar',
-      {
-        Registro: cpf,
-        Email: email,
-      }
-    );
+    const result = await this.http.post<{
+      Sucesso: boolean;
+      Nome?: string;
+    }>(AlunoRepository.baseUrl + '/Validar', {
+      Registro: cpf,
+      Email: email,
+    });
 
     return !result.Sucesso;
   }

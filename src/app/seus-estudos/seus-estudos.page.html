@@ -31,7 +31,7 @@
                     >
                       {{faculdade.description}}
                     </option>
-                  </select>                  
+                  </select>
 
                   <div tp-select-header>
                     <p tp-label token="p14">
@@ -53,12 +53,13 @@
                   </div>
                 </div>
                 <ion-label
-                    class="trial-estudos__aviso"
-                    token="p12x"
-                    *ngIf="isInvalid(getControl('faculdade'))"
-                  >
-                    Faculdade é obrigatório
-                  </ion-label>
+                  ds-color="warning"
+                  class="trial-estudos__aviso"
+                  token="p12x"
+                  *ngIf="isInvalid(getControl('faculdade'))"
+                >
+                  Faculdade é obrigatório
+                </ion-label>
 
                 <ion-label token="p14" ds-color="neutral-8"
                   >Ano de formação</ion-label
@@ -83,7 +84,7 @@
                     >
                       {{graduacao.description}}
                     </option>
-                  </select>                  
+                  </select>
                   <div tp-select-header>
                     <p tp-label token="p14">
                       {{findDescription(graduacoes,
@@ -103,8 +104,12 @@
                     </ul>
                   </div>
                 </div>
-                <ion-label class="trial-estudos__aviso" token="p12x">
-                    Ano de Formação é obrigatório
+                <ion-label
+                  ds-color="warning"
+                  class="trial-estudos__aviso"
+                  token="p12x"
+                >
+                  Ano de Formação é obrigatório
                 </ion-label>
 
                 <ion-label token="p14" ds-color="neutral-8">Objetivo</ion-label>
@@ -121,7 +126,7 @@
                     <option *ngFor="let area of areas; trackBy: trackById">
                       {{area.description}}
                     </option>
-                  </select>                  
+                  </select>
 
                   <div tp-select-header>
                     <p tp-label token="p14">
@@ -169,7 +174,7 @@
                     >
                       {{especialidade.description}}
                     </option>
-                  </select>                  
+                  </select>
 
                   <div tp-select-header>
                     <p tp-label token="p14">
@@ -215,7 +220,7 @@
                     >
                       {{concurso.description}}
                     </option>
-                  </select>                 
+                  </select>
 
                   <div tp-select-header>
                     <p tp-label token="p14">
