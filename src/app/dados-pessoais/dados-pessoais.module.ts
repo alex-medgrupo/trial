@@ -7,9 +7,11 @@ import { StepperModule } from '../components/stepper/stepper.module';
 import { AlunoRepository } from '../repositories/aluno';
 import { DadosPessoaisPageRoutingModule } from './dados-pessoais-routing.module';
 import { DadosPessoaisPage } from './dados-pessoais.page';
+import { BrMaskerModule } from 'br-mask';
 
 @NgModule({
   imports: [
+    BrMaskerModule,
     CommonModule,
     IonicModule,
     DadosPessoaisPageRoutingModule,

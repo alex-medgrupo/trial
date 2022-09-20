@@ -74,12 +74,7 @@
                   <ion-label token="p14" ds-color="neutral-8"
                     >Digite seu CPF</ion-label
                   >
-                  <ion-input
-                    formControlName="cpf"
-                    mode="md"
-                    ds-name="secondary"
-                    placeholder="000.000.000-00"
-                  ></ion-input>
+                  <ion-input type="text" ds-name="secondary" mode="md" name="cpf" formControlName="cpf" placeholder="000.000.000-00" [brmasker]="{person: true}"></ion-input>
                 </div>
               </div>
 
